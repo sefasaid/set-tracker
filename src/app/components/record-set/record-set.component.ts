@@ -1,12 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { IonicModule, ModalController } from '@ionic/angular';
+import { ModalController } from '@ionic/angular/standalone';
 import { NumKeyboardComponent } from '../num-keyboard/num-keyboard.component';
+import { imports } from 'src/app/imports';
 
 @Component({
   selector: 'app-record-set',
   standalone: true,
-  imports: [IonicModule, FormsModule, NumKeyboardComponent],
+  imports: [imports, FormsModule, NumKeyboardComponent],
   templateUrl: './record-set.component.html',
   styleUrls: ['./record-set.component.scss'],
 })
