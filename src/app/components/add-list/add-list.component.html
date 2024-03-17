@@ -22,7 +22,7 @@
   <div class="input ">
     <h3>Name</h3>
     <ion-item lines="none">
-      <ion-input [(ngModel)]="name" ngModel placeholder="Lower Body, Monday, Triceps...">
+      <ion-input [(ngModel)]="name" name="name" ngDefaultControl placeholder="Lower Body, Monday, Triceps...">
       </ion-input>
     </ion-item>
     <p>Organize by workout, muscle group, day of the week, ect.</p>
@@ -30,7 +30,7 @@
   <div class="input ">
     <h3>Description</h3>
     <ion-item lines="none">
-      <ion-input [(ngModel)]="description" placeholder="Set a description or plan">
+      <ion-input [(ngModel)]="description" name="description" ngDefaultControl placeholder="Set a description or plan">
       </ion-input>
     </ion-item>
   </div>

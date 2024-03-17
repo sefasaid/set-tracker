@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { IonicModule, ModalController } from '@ionic/angular';
+import { ModalController } from '@ionic/angular/standalone';
 import { ScrollingModule } from '@angular/cdk/scrolling';
 import { DataService } from 'src/app/services/data.service';
 import { CommonModule } from '@angular/common';
@@ -8,10 +8,11 @@ import { addIcons } from 'ionicons';
 import { addCircleOutline, checkmarkCircle } from 'ionicons/icons';
 import { BehaviorSubject, Observable, debounceTime, map, switchMap } from 'rxjs';
 import { Exercise } from 'src/app/types/exercises';
+import { imports } from 'src/app/imports';
 @Component({
   selector: 'app-add-exercise',
   standalone: true,
-  imports: [IonicModule, FormsModule, ScrollingModule, CommonModule],
+  imports: [imports, FormsModule, ScrollingModule, CommonModule],
   templateUrl: './add-exercise.component.html',
   styleUrls: ['./add-exercise.component.scss'],
 })

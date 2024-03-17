@@ -1,7 +1,7 @@
 import { CUSTOM_ELEMENTS_SCHEMA, Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { IonicModule, ModalController } from '@ionic/angular';
+import { ModalController } from '@ionic/angular/standalone';
 import { ActivatedRoute } from '@angular/router';
 import { Exercise, Sets } from 'src/app/types/exercises';
 import { DataService } from 'src/app/services/data.service';
@@ -11,6 +11,7 @@ import { register } from 'swiper/element/bundle';
 
 import { IonicSlides } from '@ionic/angular/standalone';
 import { Observable } from 'rxjs';
+import { imports } from 'src/app/imports';
 
 register();
 @Component({
@@ -18,7 +19,7 @@ register();
   templateUrl: './exercise-detail.page.html',
   styleUrls: ['./exercise-detail.page.scss'],
   standalone: true,
-  imports: [IonicModule, CommonModule, FormsModule],
+  imports: [imports, CommonModule, FormsModule],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class ExerciseDetailPage implements OnInit {

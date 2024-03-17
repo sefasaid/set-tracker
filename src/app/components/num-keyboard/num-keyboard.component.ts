@@ -1,12 +1,12 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
-import { IonicModule } from '@ionic/angular';
 import { FormsModule } from '@angular/forms';
 import { addIcons } from 'ionicons';
 import { backspaceOutline } from 'ionicons/icons';
+import { imports } from 'src/app/imports';
 @Component({
   selector: 'app-num-keyboard',
   standalone: true,
-  imports: [IonicModule, FormsModule],
+  imports: [imports, FormsModule],
   templateUrl: './num-keyboard.component.html',
   styleUrls: ['./num-keyboard.component.scss'],
 })

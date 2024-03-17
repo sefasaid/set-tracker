@@ -1,22 +1,26 @@
-import { IonRouterOutlet } from '@ionic/angular/standalone';
+
 import { List } from '../../types/exercises';
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { IonicModule, ModalController, ActionSheetController } from '@ionic/angular';
 import { DataService } from 'src/app/services/data.service';
 import { ActivatedRoute, Router, RouterLinkWithHref } from '@angular/router';
 import { AddExerciseComponent } from 'src/app/components/add-exercise/add-exercise.component';
 import { addIcons } from 'ionicons';
 import { addOutline, trash } from 'ionicons/icons';
 import { RecordSetComponent } from 'src/app/components/record-set/record-set.component';
+import { imports } from 'src/app/imports';
+import { IonRouterOutlet, ModalController, ActionSheetController } from '@ionic/angular/standalone';
 
 @Component({
   selector: 'app-list-detail',
   templateUrl: './list-detail.page.html',
   styleUrls: ['./list-detail.page.scss'],
   standalone: true,
-  imports: [IonicModule, CommonModule, FormsModule, RouterLinkWithHref]
+  imports: [imports, CommonModule, FormsModule, RouterLinkWithHref],
+  providers: [
+    ModalController, ActionSheetController, IonRouterOutlet
+  ]
 })
 export class ListDetailPage implements OnInit, OnDestroy {
   public exerciseList: List | null = null;

@@ -1,11 +1,12 @@
-import { IonicModule, ModalController } from '@ionic/angular';
+import { ModalController } from '@ionic/angular/standalone';
 import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { imports } from 'src/app/imports';
 
 @Component({
   selector: 'app-add-list',
   standalone: true,
-  imports: [IonicModule, FormsModule],
+  imports: [imports, FormsModule],
   templateUrl: './add-list.component.html',
   styleUrls: ['./add-list.component.scss'],
 })
