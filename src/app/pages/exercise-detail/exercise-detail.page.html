@@ -1,0 +1,69 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/list-detail/{{listDetail?.id}}" text="{{listDetail?.name}}"></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{exercise?.name}}</ion-title>
+  </ion-toolbar>
+
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">{{exercise?.name}}</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  @if (exercise?.images) {
+
+  <swiper-container pagination="true" [modules]="swiperModules" space-between="10" centered-slides="true">
+    @for (item of exercise?.images; track $index) {
+    <swiper-slide lazy="true">
+      <img [src]="'https://ik.imagekit.io/yuhonas/' +item"
+        [srcset]="'https://ik.imagekit.io/yuhonas/' +item+' 850w, https://ik.imagekit.io/yuhonas/tr:w-250,h-180/' +item+' 200w'"
+        loading="lazy" sizes="(min-width: 765px) 200px,
+            850px" loading="lazy" class="image">
+    </swiper-slide>
+    }
+  </swiper-container>
+  }
+  @if (records$|async; as records) {
+  @if(records.length > 0) {
+  @for (item of records; track $index) {
+  <p> {{item.date | date:'dd MMMM yyyy'}}</p>
+  <ion-list [inset]="true">
+    @for (log of item.set.logs; track $index) {
+    <ion-item>
+      <ion-label>
+        {{log.date | date:'hh:mm'}}
+      </ion-label>
+      <ion-label class="reps-weight">
+        <ion-text color="primary">
+          <span>{{log.reps}}rep</span>
+        </ion-text>
+        <ion-text color="warning">
+          <span>{{log.weight}}kg</span>
+        </ion-text>
+      </ion-label>
+    </ion-item>
+    }
+
+  </ion-list>
+  }
+  } @else {
+  <div class="empty small-empty">
+    <h1>No Sets</h1>
+    <h3>Record sets to progress every session.</h3>
+  </div>
+  }
+  }
+</ion-content>
+
+<ion-footer class="ion-no-border ion-padding" collapse="fade" [translucent]="true">
+  <ion-toolbar class="ion-text-center">
+    <ion-button expand="block" (click)="openRecordSet()">
+      <ion-icon slot="start" name="add-outline"></ion-icon>
+      Record Set
+    </ion-button>
+  </ion-toolbar>
+</ion-footer>

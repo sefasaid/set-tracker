@@ -1,0 +1,38 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="cancel()">Cancel</ion-button>
+    </ion-buttons>
+    <ion-title>New List</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="confirm()" [disabled]="name.length === 0" [strong]="true">Confirm</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding" [fullscreen]="true">
+
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">New List</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <div class="icon">
+    <ion-icon color="primary" name="document-text-outline"></ion-icon>
+  </div>
+  <div class="input ">
+    <h3>Name</h3>
+    <ion-item lines="none">
+      <ion-input [(ngModel)]="name" ngModel placeholder="Lower Body, Monday, Triceps...">
+      </ion-input>
+    </ion-item>
+    <p>Organize by workout, muscle group, day of the week, ect.</p>
+  </div>
+  <div class="input ">
+    <h3>Description</h3>
+    <ion-item lines="none">
+      <ion-input [(ngModel)]="description" placeholder="Set a description or plan">
+      </ion-input>
+    </ion-item>
+  </div>
+
+</ion-content>

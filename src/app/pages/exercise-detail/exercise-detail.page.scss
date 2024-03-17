@@ -1,0 +1,16 @@
+.image {
+    border-radius: 12px;
+}
+swiper-container {
+    --swiper-pagination-progressbar-bg-color: rgba(var(--ion-text-color-rgb, 0, 0, 0), 0.25);
+    --swiper-scrollbar-bg-color: rgba(var(--ion-text-color-rgb, 0, 0, 0), 0.1);
+    --swiper-scrollbar-drag-bg-color: rgba(var(--ion-text-color-rgb, 0, 0, 0), 0.5);
+}
+.reps-weight {
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+    span {
+        font-weight: bold;
+    }
+}

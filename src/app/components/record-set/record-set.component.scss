@@ -1,0 +1,32 @@
+.custom-input {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 32px;
+    flex-direction: row;
+    background-color: var(--ion-color-light);
+    border-radius: 8px;
+    .count{
+        margin: 0 16px;
+        font-size: 24px;
+        font-weight: 600;
+        color: var(--ion-color-primary);
+        text-align: center;
+        flex: 1;
+    }
+    span{
+        font-size: 24px;
+        font-weight: 600;
+        color: var(--ion-color-primary);
+        text-align: center;
+        margin: 1rem;
+    }
+    .change-button{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+.selected-input{
+    outline: 1px solid var(--ion-color-primary);
+}

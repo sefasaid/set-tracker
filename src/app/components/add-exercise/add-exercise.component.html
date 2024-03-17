@@ -1,0 +1,29 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Add Exercise</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="confirm()" [strong]="true">Done</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+  <ion-toolbar>
+    <ion-searchbar (ionInput)="onSearch($event)"></ion-searchbar>
+  </ion-toolbar>
+</ion-header>
+<ion-content [scrollY]="false" class="ion-padding">
+
+  <cdk-virtual-scroll-viewport itemSize="44" minBufferPx="900" maxBufferPx="1350">
+    <ion-list>
+      <ion-item *cdkVirtualFor="let item of exercises$ | async" (click)="addToList(item)">
+        @if (selectedList$ | async; as selectedList) {
+        @if(isIncluded(item)){
+        <ion-icon slot="start" color="primary" name="checkmark-circle"></ion-icon>
+        }@else {
+        <ion-icon slot="start" color="primary" name="add-circle-outline"></ion-icon>
+        }
+        }
+        <ion-label> {{item.name }} </ion-label>
+      </ion-item>
+    </ion-list>
+  </cdk-virtual-scroll-viewport>
+
+</ion-content>
