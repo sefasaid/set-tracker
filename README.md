@@ -13,7 +13,7 @@ In the market there are many apps for that. But mostly they are freemium or prem
 
 ## Deployed App
 
-It will deploy to GH Pages
+It.s live on GH Pages [link](https://sefasaid.github.io/set-tracker/)
 
 ## Technologies Used
 

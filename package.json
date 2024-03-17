@@ -12,7 +12,7 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "lint": "ng lint",
-    "predeploy": "commit-and-tag-version && npm run build-ionic",
+    "predeploy": "npm run build-ionic",
     "deploy": "gh-pages -d www"
   },
   "private": true,
