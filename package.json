@@ -1,7 +1,7 @@
 {
-  "name": "workout-app",
+  "name": "set-tracker",
   "version": "0.0.9",
-  "author": "Ionic Framework",
+  "author": "Sefa Said Deniz",
   "homepage": "https://sefasaid.github.io/set-tracker",
   "scripts": {
     "ng": "ng",
