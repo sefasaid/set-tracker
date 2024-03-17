@@ -1,6 +1,6 @@
 {
-  "name": "app",
-  "short_name": "app",
+  "name": "Set Tracker",
+  "short_name": "set-tracker",
   "theme_color": "#98add2",
   "background_color": "#fafafa",
   "display": "standalone",
