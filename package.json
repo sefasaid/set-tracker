@@ -1,12 +1,12 @@
 {
   "name": "workout-app",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "author": "Ionic Framework",
   "homepage": "https://sefasaid.github.io/set-tracker",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build-ionic": "ionic build --prod  --engine=web --platform=ios --  --base-href https://sefasaid.github.io/set-tracker/  --deploy-url=https://sefasaid.github.io/set-tracker/",
+    "build-ionic": "ionic build --prod  --engine=web --platform=ios --  --base-href /set-tracker/  --deploy-url=https://sefasaid.github.io/set-tracker/",
     "build": "ng build --base-href https://sefasaid.github.io/set-tracker/ --configuration production",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
