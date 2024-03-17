@@ -1,17 +1,18 @@
 {
   "name": "workout-app",
-  "version": "0.0.1",
+  "version": "0.0.4",
   "author": "Ionic Framework",
-  "homepage": "https://sefasaid.github.com/set-tracker",
+  "homepage": "https://sefasaid.github.io/set-tracker",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build-ionic": "ionic build --prod  --engine=web --platform=ios --  --base-href https://sefasaid.github.io/set-tracker/",
+    "build": "ng build --base-href https://sefasaid.github.io/set-tracker/ --configuration production",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "lint": "ng lint",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "predeploy": "commit-and-tag-version && npm run build-ionic",
+    "deploy": "gh-pages -d www"
   },
   "private": true,
   "dependencies": {
@@ -53,6 +54,7 @@
     "@types/uuid": "^9.0.8",
     "@typescript-eslint/eslint-plugin": "^6.0.0",
     "@typescript-eslint/parser": "^6.0.0",
+    "commit-and-tag-version": "^12.2.0",
     "eslint": "^7.26.0",
     "eslint-plugin-import": "2.22.1",
     "eslint-plugin-jsdoc": "30.7.6",
